@@ -48,7 +48,7 @@ export default function DashboardLayout({
         </nav>
 
         <div className="px-4 py-4 border-t border-border/40 flex items-center gap-2">
-          <UserButton afterSignOutUrl="/" />
+          <UserButton />
           <span className="text-xs text-muted-foreground truncate">Account</span>
         </div>
 
