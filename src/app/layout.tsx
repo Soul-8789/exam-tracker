@@ -73,7 +73,7 @@ export default function DashboardLayout({
           </p>
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <UserButton afterSignOutUrl="/" />
+            <UserButton />
             <MobileNav nav={NAV} />
           </div>
         </div>
