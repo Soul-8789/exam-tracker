@@ -55,7 +55,7 @@ export default function DashboardLayout({
         <div className="px-3 py-4 border-t border-border/40 flex items-center
                         justify-between gap-2">
           <div className="flex items-center gap-2">
-            <UserButton afterSignOutUrl="/" />
+            <UserButton />
             <span className="text-xs text-muted-foreground truncate">Account</span>
           </div>
           <ThemeToggle />
@@ -73,7 +73,7 @@ export default function DashboardLayout({
           </p>
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <UserButton />
+            <UserButton  />
             <MobileNav nav={NAV} />
           </div>
         </div>
