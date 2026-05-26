@@ -1,7 +1,27 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  // Strict mode catches React issues early
+  reactStrictMode: true,
 
-export default nextConfig;
+  // Allow YouTube thumbnails in ResourceCard img tags
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname:  "img.youtube.com",
+        pathname:  "/vi/**",
+      },
+    ],
+  },
+
+  // Silence specific build warnings that aren't real issues
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  eslint: {
+    ignoreDuringBuilds: false,
+  },
+}
+
+export default nextConfig
