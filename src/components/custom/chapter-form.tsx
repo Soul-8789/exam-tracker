@@ -91,8 +91,10 @@ export function ChapterForm({ subjectId, open, onClose, editChapter }: Props) {
 
           <div className="space-y-1.5">
             <Label>Priority</Label>
-            <Select value={priority} onValueChange={setPriority}>
-              <SelectTrigger><SelectValue /></SelectTrigger>
+<Select
+  value={priority}
+  onValueChange={(val) => setPriority(val ?? "medium")}
+>              <SelectTrigger><SelectValue /></SelectTrigger>
               <SelectContent>
                 {PRIORITIES.map((p) => (
                   <SelectItem key={p.value} value={p.value}>{p.label}</SelectItem>
