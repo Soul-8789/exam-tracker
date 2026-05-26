@@ -15,7 +15,7 @@ const COLOR_MAP: Record<string, string> = {
 
 interface Session {
   id: string; title: string; startTime?: string
-  durationMins: number; isCompleted: boolean; color: string
+  durationMins: number; isCompleted: boolean; color: string;  date?: string   // ✅ add this
 }
 
 interface Props {
