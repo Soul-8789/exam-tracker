@@ -57,10 +57,10 @@ export function ChapterRow({ chapter, subjectId, index }: Props) {
         </span>
         <span className="text-[11px] text-muted-foreground/60 font-mono mt-0.5">
           pg {chapter.pageRange}
-          {chapter.expectedQs > 0 && (
-            <span className="ml-2 text-muted-foreground/40">~{chapter.expectedQs}Q
-            </span>
-          )}
+          {(chapter.expectedQs ?? 0) > 0 && (
+  <span className="ml-2 text-muted-foreground/40">~{chapter.expectedQs}Q</span>
+)}
+
         </span>
       </div>
 
